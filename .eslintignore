@@ -1,0 +1,8 @@
+node_modules
+test
+test.js
+bench.js
+packages/turf/turf.js
+packages/turf/turf.min.js
+rollup.config.js
+simplepolygon.js
