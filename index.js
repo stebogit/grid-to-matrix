@@ -11,24 +11,25 @@ var featureEach = require('@turf/meta').featureEach;
  * @param {string} [property='elevation'] the property name in `points` from which z-values will be pulled
  * @returns {Array<Array<number>>} matrix of property values
  * @example
- * var extent = [-70.823364, -33.553984, -70.473175, -33.302986];
- * var cellSize = 3;
- * var grid = turf.pointGrid(extent, cellSize);
- * // add a random property to each point between 0 and 60
- * for (var i = 0; i < grid.features.length; i++) {
- *   grid.features[i].properties.elevation = (Math.random() * 60);
- * }
- * gridToMatrix(grid)
- * //= [
- *   [ 1, 13, 10,  9, 10, 13, 18],
- *   [34,  8,  5,  4,  5,  8, 13],
- *   [10,  5,  2,  1,  2,  5,  4],
- *   [ 0,  4, 56, 19,  1,  4,  9],
- *   [10,  5,  2,  1,  2,  5, 10],
- *   [57,  8,  5,  4,  5,  0, 57],
- *   [ 3, 13, 10,  9,  5, 13, 18],
- *   [18, 13, 10,  9, 78, 13, 18]
- * ]
+ *   var pointGrid = require('@turf/point-grid');
+ *   var extent = [-70.823364, -33.553984, -70.473175, -33.302986];
+ *   var cellSize = 3;
+ *   var grid = pointGrid(extent, cellSize);
+ *   // add a random property to each point between 0 and 60
+ *   for (var i = 0; i < grid.features.length; i++) {
+ *     grid.features[i].properties.elevation = (Math.random() * 60);
+ *   }
+ *   gridToMatrix(grid);
+ *   //= [
+ *     [ 1, 13, 10,  9, 10, 13, 18],
+ *     [34,  8,  5,  4,  5,  8, 13],
+ *     [10,  5,  2,  1,  2,  5,  4],
+ *     [ 0,  4, 56, 19,  1,  4,  9],
+ *     [10,  5,  2,  1,  2,  5, 10],
+ *     [57,  8,  5,  4,  5,  0, 57],
+ *     [ 3, 13, 10,  9,  5, 13, 18],
+ *     [18, 13, 10,  9, 78, 13, 18]
+ *   ]
  */
 module.exports = function (grid, property) {
     // validation
