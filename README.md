@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/stebogit/grid-to-matrix.svg?branch=master)](https://travis-ci.org/stebogit/grid-to-matrix)
 [![npm version](https://badge.fury.io/js/grid-to-matrix.svg)](https://badge.fury.io/js/grid-to-matrix)
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/DenisCarriere/bbox-dateline/master/LICENSE)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/stebogit/grid-to-matrix/blob/master/LICENSE)
 
 Takes a [Point](http://geojson.org/geojson-spec.html#point) grid and returns a correspondent matrix of the `property` values
 
