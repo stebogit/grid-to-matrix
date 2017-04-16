@@ -22,8 +22,8 @@ test('grid-to-matrix', t => {
     for (const {filename, name, geojson}  of fixtures) {
         const matrix = gridToMatrix(geojson);
 
-        if (process.env.REGEN) write.sync(directories.out + filename, matrix);
-        t.deepEquals(matrix, load.sync(directories.out + filename), name);
+        if (process.env.REGEN) write.sync(directories.out + name + '.json', matrix);
+        t.deepEquals(matrix, load.sync(directories.out + name + '.json'), name);
     }
     t.end();
 });
