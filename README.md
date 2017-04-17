@@ -23,6 +23,12 @@ Matrix \[**[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 $ npm install grid-to-matrix
 ```
 
+**browser (ES5)**
+
+```html
+<script src="https://unpkg.com/grid-to-matrix@1.1.0/dist/grid-to-matrix.min.js"></script>
+```
+
 ### Quickstart
 
 ```javascript
