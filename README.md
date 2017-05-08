@@ -11,6 +11,8 @@ Takes a [Point](http://geojson.org/geojson-spec.html#point) grid and returns a c
 - `grid` \[**[FeatureCollection](http://geojson.org/geojson-spec.html#feature-collection-objects)&lt;[Point](http://geojson.org/geojson-spec.html#point)>**] grid of points
 - `property` \[**[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**] the property name in `grid` from which the matrix values will be pulled (optional, default `elevation`)
 
+- `flip` \[**[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**] returns the matrix upside-down (optional, default `false`)
+
 **Returns**
  
 Matrix \[**[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)<Array<<[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)>>**] of the `grid` points `property` values

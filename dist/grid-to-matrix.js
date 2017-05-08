@@ -815,6 +815,7 @@ var featureEach = index$4.featureEach;
  * @name gridToMatrix
  * @param {FeatureCollection<Point>} grid of points
  * @param {string} [property='elevation'] the property name in `points` from which z-values will be pulled
+ * @param {boolean} [flip=false] returns the matrix upside-down
  * @returns {Array<Array<number>>} matrix of property values
  * @example
  *   var pointGrid = require('@turf/point-grid');
@@ -837,12 +838,12 @@ var featureEach = index$4.featureEach;
  *     [18, 13, 10,  9, 78, 13, 18]
  *   ]
  */
-var index = function (grid, property) {
+var index = function (grid, property, flip) {
     // validation
     index$2.collectionOf(grid, 'Point', 'input must contain Points');
     property = property || 'elevation';
 
-    var pointsMatrix = sortPointsByLatLng(grid);
+    var pointsMatrix = sortPointsByLatLng(grid, flip);
 
     var matrix = [];
 
@@ -871,9 +872,10 @@ var index = function (grid, property) {
  *
  * @private
  * @param {FeatureCollection<Point>} points GeoJSON Point features
+ * @param {boolean} [flip=false] returns the matrix upside-down
  * @returns {Array<Array<Point>>} points by latitude and longitude
  */
-function sortPointsByLatLng(points) {
+function sortPointsByLatLng(points, flip) {
     var pointsByLatitude = {};
 
     // divide points by rows with the same latitude
@@ -894,7 +896,11 @@ function sortPointsByLatLng(points) {
 
     // sort rows (of points with the same latitude) by latitude
     var pointMatrix = orderedRowsByLatitude.sort(function (a, b) {
-        return getCoords(b[0])[1] - getCoords(a[0])[1];
+        if (flip) {
+            return getCoords(a[0])[1] - getCoords(b[0])[1];
+        } else {
+            return getCoords(b[0])[1] - getCoords(a[0])[1];
+        }
     });
     return pointMatrix;
 }

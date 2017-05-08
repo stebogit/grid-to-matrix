@@ -1,0 +1,840 @@
+{
+  "property": "temperature",
+  "points": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 58
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.79708,
+            47.095336
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 56
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.79708,
+            47.18524
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 30
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.79708,
+            47.275144
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 15
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.79708,
+            47.365048
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 15
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.79708,
+            47.454952
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 20
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.79708,
+            47.544856
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 14
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.79708,
+            47.63476
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 14
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.79708,
+            47.724664
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 4
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.665057,
+            47.095336
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 30
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.665057,
+            47.18524
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 56
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.665057,
+            47.275144
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 1
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.665057,
+            47.365048
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 12
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.665057,
+            47.454952
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 0
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.665057,
+            47.544856
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 26
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.665057,
+            47.63476
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 21
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.665057,
+            47.724664
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 1
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.533034,
+            47.095336
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 50
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.533034,
+            47.18524
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 51
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.533034,
+            47.275144
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 48
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.533034,
+            47.365048
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 49
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.533034,
+            47.454952
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 8
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.533034,
+            47.544856
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 29
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.533034,
+            47.63476
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 22
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.533034,
+            47.724664
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 35
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.401011,
+            47.095336
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 46
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.401011,
+            47.18524
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 45
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.401011,
+            47.275144
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 21
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.401011,
+            47.365048
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 47
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.401011,
+            47.454952
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 57
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.401011,
+            47.544856
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 14
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.401011,
+            47.63476
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 16
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.401011,
+            47.724664
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 58
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.268989,
+            47.095336
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 30
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.268989,
+            47.18524
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 21
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.268989,
+            47.275144
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 30
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.268989,
+            47.365048
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 11
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.268989,
+            47.454952
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 42
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.268989,
+            47.544856
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 37
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.268989,
+            47.63476
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 16
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.268989,
+            47.724664
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 31
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.136966,
+            47.095336
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 23
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.136966,
+            47.18524
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 56
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.136966,
+            47.275144
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 51
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.136966,
+            47.365048
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 3
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.136966,
+            47.454952
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 25
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.136966,
+            47.544856
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 29
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.136966,
+            47.63476
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 58
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.136966,
+            47.724664
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 36
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.004943,
+            47.095336
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 9
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.004943,
+            47.18524
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 44
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.004943,
+            47.275144
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 40
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.004943,
+            47.365048
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 6
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.004943,
+            47.454952
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 19
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.004943,
+            47.544856
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 14
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.004943,
+            47.63476
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 16
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.004943,
+            47.724664
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 17
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -119.87292,
+            47.095336
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 43
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -119.87292,
+            47.18524
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 52
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -119.87292,
+            47.275144
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 49
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -119.87292,
+            47.365048
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 3
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -119.87292,
+            47.454952
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 17
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -119.87292,
+            47.544856
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 58
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -119.87292,
+            47.63476
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "temperature": 14
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -119.87292,
+            47.724664
+          ]
+        }
+      }
+    ]
+  }
+}
