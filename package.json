@@ -48,7 +48,7 @@
     "rollup-plugin-node-resolve": "^2.0.0",
     "tape": "^3.5.0",
     "typescript": "2.5.2",
-    "uglifyjs": "2.4.11",
+    "uglify-js": "3.1.1",
     "write-json-file": "2.2.0"
   },
   "dependencies": {
