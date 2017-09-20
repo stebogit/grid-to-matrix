@@ -1,6 +1,8 @@
+var meta = require('@turf/meta');
 var invariant = require('@turf/invariant');
 var getCoords = invariant.getCoords;
-var featureEach = require('@turf/meta').featureEach;
+var featureEach = meta.featureEach;
+var collectionOf = invariant.collectionOf;
 
 /**
  * Takes a {@link Point} grid and returns a correspondent matrix {Array<Array<number>>}
@@ -10,6 +12,8 @@ var featureEach = require('@turf/meta').featureEach;
  * @param {FeatureCollection<Point>} grid of points
  * @param {string} [property='elevation'] the property name in `points` from which z-values will be pulled
  * @param {boolean} [flip=false] returns the matrix upside-down
+ * @param {boolean} [flags=false] flags, adding a `matrixPosition` array field ([row, column]) to its properties,
+ * the grid points with coordinates on the matrix
  * @returns {Array<Array<number>>} matrix of property values
  * @example
  *   var pointGrid = require('@turf/point-grid');
@@ -32,15 +36,14 @@ var featureEach = require('@turf/meta').featureEach;
  *     [18, 13, 10,  9, 78, 13, 18]
  *   ]
  */
-module.exports = function (grid, property, flip) {
+module.exports = function (grid, property, flip, flags) {
     // validation
-    invariant.collectionOf(grid, 'Point', 'input must contain Points');
+    collectionOf(grid, 'Point', 'input must contain Points');
     property = property || 'elevation';
 
     var pointsMatrix = sortPointsByLatLng(grid, flip);
 
     var matrix = [];
-
     // create property matrix from sorted points
     // looping order matters here
     for (var r = 0; r < pointsMatrix.length; r++) {
@@ -49,11 +52,10 @@ module.exports = function (grid, property, flip) {
         for (var c = 0; c < pointRow.length; c++) {
             var point = pointRow[c];
             // property exist
-            if (point.properties[property]) {
-                row.push(point.properties[property]);
-            } else {
-                row.push(0);
-            }
+            if (point.properties[property]) row.push(point.properties[property]);
+            else row.push(0);
+            // add flags
+            if (flags === true) point.properties.matrixPosition = [r, c];
         }
         matrix.push(row);
     }
@@ -61,13 +63,14 @@ module.exports = function (grid, property, flip) {
     return matrix;
 };
 
+
 /**
  * Sorts points by latitude and longitude, creating a 2-dimensional array of points
  *
  * @private
  * @param {FeatureCollection<Point>} points GeoJSON Point features
  * @param {boolean} [flip=false] returns the matrix upside-down
- * @returns {Array<Array<Point>>} points by latitude and longitude
+ * @returns {Array<Array<Point>>} points ordered by latitude and longitude
  */
 function sortPointsByLatLng(points, flip) {
     var pointsByLatitude = {};
@@ -75,7 +78,7 @@ function sortPointsByLatLng(points, flip) {
     // divide points by rows with the same latitude
     featureEach(points, function (point) {
         var lat = getCoords(point)[1];
-        if (!pointsByLatitude[lat]) { pointsByLatitude[lat] = []; }
+        if (!pointsByLatitude[lat]) pointsByLatitude[lat] = [];
         pointsByLatitude[lat].push(point);
     });
 
@@ -90,11 +93,9 @@ function sortPointsByLatLng(points, flip) {
 
     // sort rows (of points with the same latitude) by latitude
     var pointMatrix = orderedRowsByLatitude.sort(function (a, b) {
-        if (flip) {
-            return getCoords(a[0])[1] - getCoords(b[0])[1];
-        } else {
-            return getCoords(b[0])[1] - getCoords(a[0])[1];
-        }
+        if (flip) return getCoords(a[0])[1] - getCoords(b[0])[1];
+        else return getCoords(b[0])[1] - getCoords(a[0])[1];
     });
+
     return pointMatrix;
 }

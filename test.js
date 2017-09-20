@@ -14,18 +14,22 @@ const fixtures = fs.readdirSync(directories.in).map(filename => {
     return {
         filename,
         name: path.parse(filename).name,
-        json: load.sync(directories.in + filename)
+        geojson: load.sync(directories.in + filename)
     };
 });
 
 test('grid-to-matrix', t => {
-    for (const {filename, name, json}  of fixtures) {
-        const {points, property, flip} = json;
-        const matrix = gridToMatrix(points, property, flip);
+    for (const {filename, name, geojson}  of fixtures) {
+        const {points, property, flip, flags} = geojson;
+        let result = gridToMatrix(points, property, flip, flags);
 
-        if (process.env.REGEN) write.sync(directories.out + name + '.json', matrix);
-        t.deepEquals(matrix, load.sync(directories.out + name + '.json'), name);
+        if (flags) {
+            geojson.matrix = result;
+            result = geojson;
+        }
+
+        if (process.env.REGEN) write.sync(directories.out + name + '.json', result);
+        t.deepEquals(result, load.sync(directories.out + name + '.json'), name);
     }
     t.end();
 });
-
