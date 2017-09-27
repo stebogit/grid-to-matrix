@@ -3,6 +3,11 @@ logs
 *.log
 npm-debug.log*
 
+grid-to-matrix.js
+grid-to-matrix.min.js
+
+.esm-cache
+
 # Runtime data
 pids
 *.pid

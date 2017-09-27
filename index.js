@@ -1,8 +1,5 @@
-var meta = require('@turf/meta');
-var invariant = require('@turf/invariant');
-var getCoords = invariant.getCoords;
-var featureEach = meta.featureEach;
-var collectionOf = invariant.collectionOf;
+import {getCoords, collectionOf} from '@turf/invariant';
+import {featureEach} from '@turf/meta';
 
 /**
  * Takes a {@link Point} grid and returns a correspondent matrix {Array<Array<number>>}
@@ -36,7 +33,7 @@ var collectionOf = invariant.collectionOf;
  *     [18, 13, 10,  9, 78, 13, 18]
  *   ]
  */
-module.exports = function (grid, property, flip, flags) {
+export default function gridToMatrix(grid, property, flip, flags) {
     // validation
     collectionOf(grid, 'Point', 'input must contain Points');
     property = property || 'elevation';
@@ -61,8 +58,7 @@ module.exports = function (grid, property, flip, flags) {
     }
 
     return matrix;
-};
-
+}
 
 /**
  * Sorts points by latitude and longitude, creating a 2-dimensional array of points

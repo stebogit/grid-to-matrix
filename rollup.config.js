@@ -1,21 +1,21 @@
-import path from 'path'
-import resolve from 'rollup-plugin-node-resolve'
-import commonjs from 'rollup-plugin-commonjs'
-import builtins from 'rollup-plugin-node-builtins'
-import globals from 'rollup-plugin-node-globals'
-import json from 'rollup-plugin-json'
+import nodeResolve from 'rollup-plugin-node-resolve'
+import uglify from 'rollup-plugin-uglify'
 
-export default {
-  entry: path.join(__dirname, 'index.js'),
-  dest: path.join(__dirname, 'dist', 'grid-to-matrix.js'),
-  format: 'umd',
-  plugins: [
-    json(),
-    resolve(),
-    commonjs(),
-    globals(),
-    builtins()
-  ],
-  useStrict: false,
-  moduleName: 'gridToMatrix'
-}
+export default [{
+  input: 'index.js',
+  output: {
+      extend: true,
+      file: 'grid-to-matrix.js',
+      format: 'cjs'
+  },
+  plugins: [nodeResolve()]
+}, {
+  input: 'index.js',
+  output: {
+      extend: true,
+      file: 'grid-to-matrix.min.js',
+      format: 'umd',
+      name: 'gridToMatrix'
+  },
+  plugins: [nodeResolve(), uglify()]
+}]
