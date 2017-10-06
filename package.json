@@ -35,7 +35,7 @@
     "url": "https://github.com/stebogit/grid-to-matrix/issues"
   },
   "devDependencies": {
-    "@turf/point-grid": "^4.7.3",
+    "@turf/point-grid": "*",
     "@types/geojson": "*",
     "benchmark": "*",
     "eslint": "*",
@@ -49,8 +49,8 @@
     "write-json-file": "*"
   },
   "dependencies": {
-    "@turf/helpers": "^5.0.0",
-    "@turf/invariant": "^5.0.0",
-    "@turf/meta": "^5.0.0"
+    "@turf/helpers": "5.x",
+    "@turf/invariant": "5.x",
+    "@turf/meta": "5.x"
   }
 }
