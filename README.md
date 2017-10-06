@@ -9,9 +9,9 @@ Takes a [Point](http://geojson.org/geojson-spec.html#point) grid and returns a c
 **Parameters**
 
 - `grid` \[**[FeatureCollection](http://geojson.org/geojson-spec.html#feature-collection-objects)&lt;[Point](http://geojson.org/geojson-spec.html#point)>**] grid of points
-- `property` \[**[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**] the property name in `grid` from which the matrix values will be pulled (optional, default `elevation`)
-- `flip` \[**[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**] returns the matrix upside-down (optional, default `false`)
-- `flags` \[**[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**] , adding a `matrixPosition` array field ([`row`, `column`]) to its properties, the grid points with coordinates on the matrix (optional, default `false`)
+- `options.zProperty` \[**[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**] the property name in `grid` from which the matrix values will be pulled (optional, default `elevation`)
+- `options.flip` \[**[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**] returns the matrix upside-down (optional, default `false`)
+- `options.flags` \[**[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**] , adding a `matrixPosition` array field ([`row`, `column`]) to its properties, the grid points with coordinates on the matrix (optional, default `false`)
 
 **Returns**
 
