@@ -1,5 +1,6 @@
 import {getCoords, collectionOf} from '@turf/invariant';
 import {featureEach} from '@turf/meta';
+import {isObject} from '@turf/helpers';
 
 /**
  * Takes a {@link Point} grid and returns a correspondent matrix {Array<Array<number>>}
@@ -7,16 +8,16 @@ import {featureEach} from '@turf/meta';
  *
  * @name gridToMatrix
  * @param {FeatureCollection<Point>} grid of points
- * @param {string} [property='elevation'] the property name in `points` from which z-values will be pulled
- * @param {boolean} [flip=false] returns the matrix upside-down
- * @param {boolean} [flags=false] flags, adding a `matrixPosition` array field ([row, column]) to its properties,
+ * @param {Object} [options={}] Optional parameters
+ * @param {string} [options.zProperty='elevation'] the property name in `points` from which z-values will be pulled
+ * @param {boolean} [options.flip=false] returns the matrix upside-down
+ * @param {boolean} [options.flags=false] flags, adding a `matrixPosition` array field ([row, column]) to its properties,
  * the grid points with coordinates on the matrix
  * @returns {Array<Array<number>>} matrix of property values
  * @example
- *   var pointGrid = require('@turf/point-grid');
  *   var extent = [-70.823364, -33.553984, -70.473175, -33.302986];
  *   var cellSize = 3;
- *   var grid = pointGrid(extent, cellSize);
+ *   var grid = turf.pointGrid(extent, cellSize);
  *   // add a random property to each point between 0 and 60
  *   for (var i = 0; i < grid.features.length; i++) {
  *     grid.features[i].properties.elevation = (Math.random() * 60);
@@ -33,10 +34,16 @@ import {featureEach} from '@turf/meta';
  *     [18, 13, 10,  9, 78, 13, 18]
  *   ]
  */
-export default function gridToMatrix(grid, property, flip, flags) {
+export default function gridToMatrix(grid, options) {
+    // Optional parameters
+    options = options || {};
+    if (!isObject(options)) throw new Error('options is invalid');
+    var zProperty = options.zProperty || 'elevation';
+    var flip = options.flip;
+    var flags = options.flags;
+
     // validation
     collectionOf(grid, 'Point', 'input must contain Points');
-    property = property || 'elevation';
 
     var pointsMatrix = sortPointsByLatLng(grid, flip);
 
@@ -48,8 +55,8 @@ export default function gridToMatrix(grid, property, flip, flags) {
         var row = [];
         for (var c = 0; c < pointRow.length; c++) {
             var point = pointRow[c];
-            // property exist
-            if (point.properties[property]) row.push(point.properties[property]);
+            // Check if zProperty exist
+            if (point.properties[zProperty]) row.push(point.properties[zProperty]);
             else row.push(0);
             // add flags
             if (flags === true) point.properties.matrixPosition = [r, c];
