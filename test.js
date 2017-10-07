@@ -1,5 +1,5 @@
-const test = require('tape');
 const fs = require('fs');
+const test = require('tape');
 const path = require('path');
 const load = require('load-json-file');
 const write = require('write-json-file');
@@ -20,13 +20,7 @@ const fixtures = fs.readdirSync(directories.in).map(filename => {
 
 test('grid-to-matrix', t => {
     for (const {filename, name, geojson}  of fixtures) {
-        const {points, property, flip, flags} = geojson;
-        let result = gridToMatrix(points, property, flip, flags);
-
-        if (flags) {
-            geojson.matrix = result;
-            result = geojson;
-        }
+        const result = gridToMatrix(geojson, geojson.properties);
 
         if (process.env.REGEN) write.sync(directories.out + name + '.json', result);
         t.deepEquals(result, load.sync(directories.out + name + '.json'), name);

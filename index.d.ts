@@ -1,7 +1,10 @@
-/// <reference types="geojson" />
+import { FeatureCollection, Point } from '@turf/helpers';
 
-import {Points} from '@turf/helpers';
-
-declare function gridToMatrix(points: Points, property?: string, flip?: boolean, flags?: boolean): Array<Array<number>>;
-declare namespace gridToMatrix { }
-export = gridToMatrix;
+export default function gridToMatrix(
+    points: FeatureCollection<Point>,
+    optiosn?: {
+        property?: string,
+        flip?: boolean,
+        flags?: boolean
+    }
+): number[][];

@@ -1,7 +1,7 @@
-const Benchmark = require('benchmark');
-const path = require('path');
 const fs = require('fs');
+const path = require('path');
 const load = require('load-json-file');
+const Benchmark = require('benchmark');
 const gridToMatrix = require('./');
 
 const directory = path.join(__dirname, 'test', 'in') + path.sep;

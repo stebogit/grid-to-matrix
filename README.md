@@ -9,12 +9,12 @@ Takes a [Point](http://geojson.org/geojson-spec.html#point) grid and returns a c
 **Parameters**
 
 - `grid` \[**[FeatureCollection](http://geojson.org/geojson-spec.html#feature-collection-objects)&lt;[Point](http://geojson.org/geojson-spec.html#point)>**] grid of points
-- `property` \[**[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**] the property name in `grid` from which the matrix values will be pulled (optional, default `elevation`)
-- `flip` \[**[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**] returns the matrix upside-down (optional, default `false`)
-- `flags` \[**[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**] , adding a `matrixPosition` array field ([`row`, `column`]) to its properties, the grid points with coordinates on the matrix (optional, default `false`)
+- `options.zProperty` \[**[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**] the property name in `grid` from which the matrix values will be pulled (optional, default `elevation`)
+- `options.flip` \[**[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**] returns the matrix upside-down (optional, default `false`)
+- `options.flags` \[**[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**] , adding a `matrixPosition` array field ([`row`, `column`]) to its properties, the grid points with coordinates on the matrix (optional, default `false`)
 
 **Returns**
- 
+
 Matrix \[**[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)<Array<<[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)>>**] of the `grid` points `property` values
 
 ### Installation
@@ -28,7 +28,7 @@ $ npm install grid-to-matrix
 **browser (ES5)**
 
 ```html
-<script src="https://unpkg.com/grid-to-matrix@1.3.0/dist/grid-to-matrix.min.js"></script>
+<script src="https://unpkg.com/grid-to-matrix/grid-to-matrix.min.js"></script>
 ```
 
 ### Quickstart
@@ -36,7 +36,7 @@ $ npm install grid-to-matrix
 ```javascript
   var pointGrid = require('@turf/point-grid');
   var gridToMatrix = require('grid-to-matrix');
-  
+
   var extent = [-70.823364, -33.553984, -70.473175, -33.302986];
   var cellSize = 3;
   var grid = pointGrid(extent, cellSize);
@@ -44,7 +44,7 @@ $ npm install grid-to-matrix
   for (var i = 0; i < grid.features.length; i++) {
     grid.features[i].properties.elevation = (Math.random() * 60);
   }
-  
+
   gridToMatrix(grid);
   // =[
   //    [ 1, 13, 20,  9, 10, 13, 18],
